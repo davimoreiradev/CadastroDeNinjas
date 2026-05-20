@@ -3,7 +3,7 @@ package dev.java10x.CadastroDeNinjas.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/ninjas")
 public class NinjaController {
 
     @GetMapping("/boasvindas")
@@ -19,15 +19,15 @@ public class NinjaController {
     }
 
     //Mostrar todos os Ninja (READ)
-    @GetMapping("/todos")
-    public String mostrarTodosOsNinja(){
-        return "Mostrar Ninja";
+    @GetMapping("/listar")
+    public String listarTodosOsNinja(){
+        return "Listar ninja";
     }
 
     //Mostrar Ninja por ID (READ)
-    @GetMapping("/todosId")
-    public String mostrarTodosPorId(){
-        return "Mostrar Ninja por id";
+    @GetMapping("/listarId")
+    public String listarTodosPorId(){
+        return "Listar ninja por id";
     }
 
     //Alterar dados do ninja (UPDATE)
